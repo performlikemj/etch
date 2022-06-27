@@ -11,5 +11,13 @@ for (let i = 0; i < 16; i++) {
     }
 };
 
+function highlight() {
+    this.style.backgroundColor = 'yellow';
+}
+
+
 const bod = document.querySelector('body');
 bod.appendChild(container);
+
+const grids = document.querySelectorAll('.row, .col');
+grids.forEach(grid => grid.addEventListener('mouseover', highlight));
